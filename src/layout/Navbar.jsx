@@ -28,9 +28,11 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 transition-all duration-500 ${
-        isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
-      }  z-50`}
+      className={`fixed top-0 left-0 right-0 z-50 border-0 transition-[padding,background-color,backdrop-filter] duration-500 ${
+        isScrolled
+          ? "bg-background/75 backdrop-blur-xl py-3"
+          : "bg-transparent py-5"
+      }`}
     >
       <nav className="container mx-auto px-6 grid grid-cols-[1fr_auto_1fr] items-center">
         <a
