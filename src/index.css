@@ -146,6 +146,24 @@
     animation: marquee 30s linear infinite;
   }
 
+  @media (max-width: 1024px) {
+    .animate-marquee {
+      animation-duration: 22s;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .animate-marquee {
+      animation-duration: 16s;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .animate-marquee {
+      animation-duration: 12s;
+    }
+  }
+
   .animation-delay-100 {
     animation-delay: 100ms;
   }

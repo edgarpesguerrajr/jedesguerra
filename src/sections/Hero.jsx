@@ -22,10 +22,6 @@ const skills = [
   "PHP",
   "Laravel",
   "MySQL",
-  "Github Copilot",
-  "ChatGPT",
-  "Claude Code",
-  "Microsoft Copilot",
   "Git",
   "GitHub",
   "VS Code",
@@ -102,9 +98,8 @@ export const Hero = () => {
               </Button>
               <AnimatedBorderButton
                 as="a"
-                href="https://drive.google.com/uc?export=download&id=13x52xp7MNZPAUy9iqs3m5QPAQBz9s77N"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/EPEJ%20-%20RESUME.pdf"
+                download="EPEJ - RESUME.pdf"
               >
                 <Download className="w-5 h-5" />
                 Download Resume

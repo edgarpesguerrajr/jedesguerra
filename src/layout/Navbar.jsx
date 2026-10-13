@@ -1,12 +1,11 @@
-import { Button } from "@/components/Button";
-import { Menu, X, Moon } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const navLinks = [
   { href: "#about", label: "ABOUT" },
   { href: "#skills", label: "SKILLS" },
   { href: "#education", label: "EDUCATION" },
-  // { href: "#projects", label: "PROJECTS" },
+  { href: "#projects", label: "PROJECTS" },
   { href: "#experience", label: "EXPERIENCE" },
   { href: "#certificates", label: "CERTIFICATES" },
   // { href: "#testimonials", label: "TESTIMONIALS" },
@@ -33,16 +32,16 @@ export const Navbar = () => {
         isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
       }  z-50`}
     >
-      <nav className="container mx-auto px-6 flex items-center justify-between">
+      <nav className="container mx-auto px-6 grid grid-cols-[1fr_auto_1fr] items-center">
         <a
           href="#"
-          className="text-xl font-bold tracking-tight hover:text-primary"
+          className="justify-self-start text-xl font-bold tracking-tight hover:text-primary"
         >
           EPEJ<span className="text-primary">.</span>
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="col-start-2 hidden md:flex items-center gap-1 justify-self-center">
           <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
             {navLinks.map((link, index) => (
               <a
@@ -56,13 +55,9 @@ export const Navbar = () => {
           </div>
         </div>
 
-        {/* CTA Button */}
-        <div className="hidden md:flex">
-          <Moon />
-        </div>
-        {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 text-foreground cursor-pointer"
+          className="col-start-3 justify-self-end md:hidden p-2 text-foreground cursor-pointer"
+          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           onClick={() => setIsMobileMenuOpen((prev) => !prev)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

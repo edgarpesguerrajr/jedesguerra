@@ -23,23 +23,24 @@ const skills = [
     no: "02",
     category: "Backend & Databases",
     description:
-      "Business logic, architecture, and schema design across relational and non-relational stores.",
+      "Application logic and relational data, mainly with PHP, Laravel, and MySQL.",
     stack: ["Python", "PHP", "Laravel", "MySQL"],
   },
   {
     no: "03",
-    category: "AI & Machine Learning",
-    description:
-      "Building intelligent models with machine learning techniques, applying AI to tasks like predictive analytics, NLP, and computer vision.",
-
-    stack: ["Github CoPilot", "OpenAI", "Claude Code", "Microsoft Copilot"],
-  },
-  {
-    no: "04",
     category: "Developer Tools",
     description:
-      "Version control, development environments, design tools, and deployment workflows.",
-    stack: ["Git", "Github", "VS Code", "Vercel"],
+      "Version control, the editor and host I deploy with, and the AI assistants I use while coding.",
+    stack: [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Vercel",
+      "GitHub Copilot",
+      "ChatGPT",
+      "Claude",
+      "Microsoft Copilot",
+    ],
   },
 ];
 
@@ -62,7 +63,7 @@ export const Skills = () => {
           />
         ))}
       </div>
-      <div className="pointer-events-none absolute inset-0">
+      <div className="pointer-events-none absolute inset-0 z-0">
         <div className="absolute right-24 top-20 h-44 w-44 rounded-full bg-highlight/10 blur-3xl" />
         <div className="absolute left-0 top-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
       </div>
@@ -90,7 +91,7 @@ export const Skills = () => {
             <AnimatedSection key={i}>
               <div
                 className="border-b border-muted-foreground/20 animate-fade-in"
-                style={{ animationDelay: `${i * 200}ms` }}
+                style={{ animationDelay: `${i * 100}ms` }}
               >
                 {/* Responsive grid: stack on mobile, 2 cols on md, 3 cols on lg */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-5">

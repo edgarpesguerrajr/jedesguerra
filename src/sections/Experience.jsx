@@ -3,7 +3,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 const experiences = [
   {
     period: "2025 — Present",
-    role: "IT Staff",
+    role: "Information Systems Analyst I",
     company: "Local Government Unit of Tanay",
     description:
       "Designed and developed in-house monitoring and management systems streamlining organizational workflows, improving transparency, and enhancing tracking of requests, approvals, and resource utilization across multiple departments.",
@@ -80,8 +80,8 @@ export const Experience = () => {
               className="text-muted-foreground
             animate-fade-in animation-delay-200"
             >
-              A timeline of my professional growth, from curious beginner to
-              senior engineer leading teams and building products at scale.
+              From internships into building and supporting systems that teams
+              use every day.
             </p>
           </AnimatedSection>
         </div>

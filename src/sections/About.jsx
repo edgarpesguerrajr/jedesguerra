@@ -4,26 +4,27 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 const highlights = [
   {
     icon: Code2,
-    title: "Clean Code",
+    title: "Internal systems",
     description:
-      "Writing maintainable, scalable code that stands the test of time.",
+      "PHP and MySQL tools that track requests, approvals, and how resources are used.",
   },
   {
     icon: Rocket,
-    title: "Performance",
+    title: "Interfaces",
     description:
-      "Optimizing for speed and delivering lightning-fast user experiences.",
+      "React and Tailwind UI, including screens for a SaaS product at 8Box Solution Inc.",
   },
   {
     icon: Users,
-    title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
+    title: "IT support",
+    description:
+      "Hardware and software troubleshooting, with records that keep office equipment reliable.",
   },
   {
     icon: Lightbulb,
-    title: "Innovation",
+    title: "Engineering base",
     description:
-      "Staying ahead with the latest technologies and best practices.",
+      "Computer Engineering at PUP, focused on software, web development, and networking.",
   },
 ];
 
@@ -59,39 +60,40 @@ export const About = () => {
             </AnimatedSection>
             <AnimatedSection>
               <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-                Designing clarity
+                Building systems
                 <span className="font-serif italic font-normal text-white">
                   {" "}
-                  into digital experiences
+                  people rely on
                 </span>
               </h2>
             </AnimatedSection>
             <AnimatedSection>
               <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
                 <p>
-                  I'm Edgar P. Esguerra Jr., a dedicated software engineer with
-                  years of experience turning ideas into impactful digital
-                  solutions. My journey began with curiosity about the web and
-                  has grown into expertise in modern frontend technologies.
+                  I'm Edgar P. Esguerra Jr., a software engineer based in
+                  Tanay, Rizal. I build web applications with PHP, MySQL, and
+                  JavaScript, and I also work with React.
                 </p>
                 <p>
-                  I specialize in PHP, MySQL, and JavaScript — building
-                  everything from sleek landing pages to robust enterprise
-                  applications. My approach blends technical precision with a
-                  strong focus on design and user experience.
+                  As an Information Systems Analyst I at the Local Government
+                  Unit of Tanay, I design in-house systems that track requests,
+                  approvals, and resource use across departments. Before that, I interned as a front-end
+                  developer at 8Box Solution Inc. and in IT technical support
+                  at PSALM Corporation.
                 </p>
                 <p>
-                  Beyond coding, I explore emerging technologies, contribute to
-                  open-source projects.
+                  I earned a Bachelor of Science in Computer Engineering from
+                  the Polytechnic University of the Philippines, with a focus
+                  on software, web development, and networking.
                 </p>
               </div>
             </AnimatedSection>
             <AnimatedSection>
               <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
                 <p className="text-lg font-medium italic text-foreground">
-                  "My mission is to create digital experiences that are not just
-                  functional, but truly delightful — products that users love to
-                  use and developers love to maintain."
+                  "I want the systems I build to be clear for the people who use
+                  them, and straightforward for the next developer who maintains
+                  them."
                 </p>
               </div>
             </AnimatedSection>

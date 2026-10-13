@@ -1,33 +1,27 @@
-import { ArrowUpRight, Github } from "lucide-react";
-import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+import { ArrowUpRight } from "lucide-react";
 import { AnimatedSection } from "@/components/AnimatedSection";
-const projects = [
+
+const certificates = [
   {
     title: "IT Customer Support Basics",
     description:
       "Validated foundational knowledge in troubleshooting, ticket handling, and user assistance, emphasizing clear communication and efficient resolution of technical issues.",
     image: "/projects/ITCustomerSupportBasics.jpg",
-    tags: ["React", "Typescript", "NodeJS"],
     link: "https://www.credly.com/badges/1c1b8d3d-2381-4b87-9367-a920914474a2/public_url",
-    github: "#",
   },
   {
     title: "Civil Service Eligibility - Professional",
     description:
       "Granted professional eligibility under the Philippine Civil Service Commission, demonstrating competence for government service roles and adherence to public sector standards.",
     image: "/projects/csc.jpg",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
-    link: "#",
-    github: "#",
+    link: "/projects/csc.jpg",
   },
   {
     title: "CCNA: Switching, Routing, and Wireless Essentials",
     description:
       "Certified skills in configuring, managing, and troubleshooting enterprise networks, with focus on routing protocols, switching technologies, and wireless connectivity solutions.",
     image: "/projects/CCNASRWE.jpg",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
     link: "https://www.credly.com/badges/ca070ac4-cea2-455e-814b-87426ec74649/public_url",
-    github: "#",
   },
 ];
 
@@ -76,56 +70,39 @@ export const Certificate = () => {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project, idx) => (
-            <AnimatedSection>
-              <div
-                key={idx}
-                className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
+          {certificates.map((certificate, idx) => (
+            <AnimatedSection key={certificate.title}>
+              <a
+                href={certificate.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1 block"
                 style={{ animationDelay: `${(idx + 1) * 100}ms` }}
               >
-                {/* Image */}
                 <div className="relative overflow-hidden aspect-video">
                   <img
-                    src={project.image}
-                    alt={project.title}
+                    src={certificate.image}
+                    alt={certificate.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div
-                    className="absolute inset-0 
-                bg-gradient-to-t from-card via-card/50
-                 to-transparent opacity-60"
-                  />
-                  {/* Overlay Links */}
-                  <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <a
-                      href={project.link}
-                      className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ArrowUpRight className="w-5 h-5" />
-                    </a>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-60" />
                 </div>
 
-                {/* Content */}
                 <div className="p-6 space-y-4">
-                  <div className="flex items-start justify-between">
+                  <div className="flex items-start justify-between gap-4">
                     <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
-                      {project.title}
+                      {certificate.title}
                     </h3>
-                    <ArrowUpRight
-                      className="w-5 h-5 
-                  text-muted-foreground group-hover:text-primary
-                   group-hover:translate-x-1 
-                   group-hover:-translate-y-1 transition-all"
-                    />
+                    <ArrowUpRight className="w-5 h-5 shrink-0 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    {project.description}
+                    {certificate.description}
                   </p>
+                  <span className="inline-flex text-sm font-medium text-primary">
+                    View credential
+                  </span>
                 </div>
-              </div>
+              </a>
             </AnimatedSection>
           ))}
         </div>
